@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { WavyContainer } from "react-wavy-transitions";
+import Home from './Components/Home/Home';
+import Contact from './Components/Contact/Contact';
+import Projects from './Components/Projects/Projects';
+import NavBar from './Components/NavBar/NavBar';
+import s from './App.module.css';
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>My portfolio</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <WavyContainer />
+      <div className={s.app}>
+        <NavBar />
+        <Routes>
+          <Route path='/' index element={<Home />}></Route>
+          <Route path='/projects' element={<Projects />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='*' element={<>No match</>}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App;
+
