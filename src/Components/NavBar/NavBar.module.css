@@ -1,6 +1,6 @@
 .navBar, .navBarMobiles {
     color: white;
-    width: 20rem;
+    width: 25rem;
     min-height: 100vh;
     background: linear-gradient(
         135deg,
@@ -22,12 +22,19 @@
     width: 100%;
 }
 
+.navBar img {
+    width: 14vh;
+    height: 14vh;
+    margin-bottom: 7vh;
+}
+
 .container {
     border: 2px solid white;
     padding: 1rem;
     border-radius: 2rem;
     width: 10rem;
     text-align: center;
+    transition: all ease-in-out .5s;
 }
 
 .active {
@@ -43,4 +50,31 @@
     font-style: normal;
     font-weight: 300;
     color: #FFFFFF;
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    margin-top: 7vh;
+}
+
+.icons a {
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.icon {
+    color: white;
+    transition: all ease-in-out .2s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
 }

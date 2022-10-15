@@ -6,6 +6,8 @@ import Contact from './Components/Contact/Contact';
 import Projects from './Components/Projects/Projects';
 import NavBar from './Components/NavBar/NavBar';
 import s from './App.module.css';
+import Skills from './Components/Skills/Skills';
+import About from './Components/About/About';
 
 
 const App = () => {
@@ -17,8 +19,10 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path='/' index element={<Home />}></Route>
-          <Route path='/projects' element={<Projects />}></Route>
+          <Route path='/about' element={<About />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/projects' element={<Projects />}></Route>
+          <Route path='/skills' element={<Skills />}></Route>
           <Route path='*' element={<>No match</>}></Route>
         </Routes>
       </div>
