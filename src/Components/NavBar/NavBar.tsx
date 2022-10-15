@@ -28,19 +28,19 @@ const NavBar = () => {
                     Home
                 </WavyLink>
             </div>
-            <MdMoreVert size='3rem' color='white' />
+            <MdMoreVert size='3vh' color='white' className={s.points} />
             <div className={location.pathname === '/projects' ? `${s.container} ${s.active}` : s.container}>
                 <WavyLink direction='up' to="/projects" color="#14213d">Projects</WavyLink> 
             </div>
-            <MdMoreVert size='3rem' color='white' />
+            <MdMoreVert size='3vh' color='white'  className={s.points} />
             <div className={location.pathname === '/skills' ? `${s.container} ${s.active}` : s.container}>
                 <WavyLink direction='up' to="/skills" color="#14213d">Skills</WavyLink>
             </div>
-            <MdMoreVert size='3rem' color='white' />
+            <MdMoreVert size='3vh' color='white'  className={s.points} />
             <div className={location.pathname === '/about' ? `${s.container} ${s.active}` : s.container}>
                 <WavyLink direction='up' to="/about" color="#14213d">About</WavyLink>
             </div>
-            <MdMoreVert size='3rem' color='white' />
+            <MdMoreVert size='3rem' color='white' className={s.points}  />
             <div className={location.pathname === '/contact' ? `${s.container} ${s.active}` : s.container}>
                 <WavyLink direction='up' to="/contact" color="#14213d">Contact</WavyLink>
             </div>
@@ -53,7 +53,6 @@ const NavBar = () => {
                 >
                     <FaLinkedinIn 
                         // color='white' 
-                        size='3rem'
                         className={s.icon}
                     />
                 </a>
@@ -63,8 +62,7 @@ const NavBar = () => {
                     rel='noreferrer' 
                 >
                     <FaWhatsapp 
-                        // color='white' 
-                        size='3rem' 
+                        // color='white'  
                         className={s.icon}
                     />
                 </a>
@@ -74,8 +72,7 @@ const NavBar = () => {
                     rel='noreferrer' 
                 >
                     <FaGithub 
-                        // color='white' 
-                        size='3rem' 
+                        // color='white'  
                         className={s.icon}
                     />
                 </a>

@@ -1,6 +1,7 @@
 .navBar, .navBarMobiles {
+    position: relative;
     color: white;
-    width: 25rem;
+    width: 25vh;
     min-height: 100vh;
     background: linear-gradient(
         135deg,
@@ -12,10 +13,10 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 1.5vh;
     align-items: center;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 2vh;
 }
 
 .navBarMobiles {
@@ -25,14 +26,22 @@
 .navBar img {
     width: 14vh;
     height: 14vh;
-    margin-bottom: 7vh;
+    margin-bottom: 3vh;
+}
+
+.arrow {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    visibility: hidden;
 }
 
 .container {
     border: 2px solid white;
-    padding: 1rem;
-    border-radius: 2rem;
-    width: 10rem;
+    padding: 1vh;
+    border-radius: 2vh;
+    width: 12vh;
     text-align: center;
     transition: all ease-in-out .5s;
 }
@@ -40,12 +49,12 @@
 .active {
     background-color: #14213d;
     border: 2px solid #14213d;
-    padding: 1rem;
+    padding: 1vh;
 }
 
 
 .container button {
-    font-size: 2rem;
+    font-size: 2.5vh;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -59,8 +68,8 @@
 .icons {
     display: flex;
     flex-direction: column;
-    row-gap: 4vh;
-    margin-top: 7vh;
+    row-gap: 2vh;
+    margin-top: 3vh;
 }
 
 .icons a {
@@ -73,8 +82,74 @@
 .icon {
     color: white;
     transition: all ease-in-out .2s;
+    width: 3rem;
+    height: 3rem;
 }
 
 .icon:hover {
     transform: scale(1.2);
+}
+
+
+@media(max-width: 800px) {
+    .navBar {
+        width: 100%;
+        min-height: 18vh;
+        flex-direction: row;
+        column-gap: 2vw;
+    }
+    
+    .navBar img {
+        margin-right: 7vw;
+    }
+
+    .container button {
+        font-size: 2.5vw;
+    }
+
+    .points {
+        display: none;
+    }
+
+    .icons {
+        margin-top: 0;
+        margin-left: 7vw;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navBar img {
+        margin-right: 0;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .icons {
+        position: absolute;
+        flex-direction: row;
+        column-gap: 2vw;
+        bottom: 1vh;
+        left: 40%;
+    }
+
+    .icon {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+@media(max-width: 500px) {
+    .icon {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+@media(max-width: 400px) {
+    .icon {
+        width: 6vw;
+        height: 6vw;
+        bottom: 3vh;
+    }
 }
