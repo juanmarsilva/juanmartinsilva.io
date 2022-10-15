@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/juanmartinsilva.io/static/css/main.37de220b.css",
-    "main.js": "/juanmartinsilva.io/static/js/main.57854735.js",
+    "main.css": "/juanmartinsilva.io/static/css/main.f1c4bb75.css",
+    "main.js": "/juanmartinsilva.io/static/js/main.d0c59b3f.js",
     "static/js/787.128fc6e9.chunk.js": "/juanmartinsilva.io/static/js/787.128fc6e9.chunk.js",
     "static/media/emoji.png": "/juanmartinsilva.io/static/media/emoji.1eee69d8e8d7683196b9.png",
     "index.html": "/juanmartinsilva.io/index.html",
-    "main.37de220b.css.map": "/juanmartinsilva.io/static/css/main.37de220b.css.map",
-    "main.57854735.js.map": "/juanmartinsilva.io/static/js/main.57854735.js.map",
+    "main.f1c4bb75.css.map": "/juanmartinsilva.io/static/css/main.f1c4bb75.css.map",
+    "main.d0c59b3f.js.map": "/juanmartinsilva.io/static/js/main.d0c59b3f.js.map",
     "787.128fc6e9.chunk.js.map": "/juanmartinsilva.io/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37de220b.css",
-    "static/js/main.57854735.js"
+    "static/css/main.f1c4bb75.css",
+    "static/js/main.d0c59b3f.js"
   ]
 }
