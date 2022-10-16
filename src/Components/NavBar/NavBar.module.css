@@ -1,5 +1,4 @@
 .navBar, .navBarMobiles {
-    position: relative;
     color: white;
     width: 25vh;
     min-height: 100vh;
@@ -17,6 +16,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 2vh;
+    position: fixed;
 }
 
 .navBarMobiles {
@@ -29,13 +29,6 @@
     margin-bottom: 3vh;
 }
 
-.arrow {
-    position: absolute;
-    top: 2vh;
-    right: 2vh;
-    cursor: pointer;
-    visibility: hidden;
-}
 
 .container {
     border: 1px solid white;
