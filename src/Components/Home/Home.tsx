@@ -8,10 +8,6 @@ const Home = () => {
                 <img src={imagen} alt='imagen' className={s.img} />
                 <h1>{`< Juan Martin Silva />`}</h1>
             </div>
-            <div className={s.principalPage}>
-                <img src={imagen} alt='imagen' className={s.img} />
-                <h1>{`< Juan Martin Silva />`}</h1>
-            </div>
         </div>
     )
 }
