@@ -6,7 +6,7 @@
     right: 0;
     color: white;
     width: 40%;
-    height: 7rem;
+    height: 6rem;
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.082),
@@ -21,7 +21,7 @@
     margin-right: auto;
     padding: 2vh;
     border-radius: 2rem;
-    border: 0.2rem solid #2a2b37;
+    border: 0.1rem solid #2a2b37;
     z-index: 9999;
     display: flex;
     justify-content: space-between;
