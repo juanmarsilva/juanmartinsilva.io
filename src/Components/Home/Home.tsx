@@ -4,6 +4,7 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import Contact from '../Contact/Contact';
+// import Spotify from '../Spotify/Spotify';
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <>
             <NavBar />
             <div className={s.container} id='home'>
+                {/* <Spotify /> */}
                 <About />
                 <Projects />
                 <Skills />
