@@ -267,9 +267,6 @@
         top: 67vh;
     }
 
-}
-
-@media(max-width: 400px) {
     .img {
         width: 15vh;
         height: 15vh;
@@ -279,7 +276,9 @@
         font-size: 1.5rem;
         padding: .8rem;
     }
+
 }
+
 
 
 
