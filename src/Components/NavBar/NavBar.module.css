@@ -1,32 +1,56 @@
-.navBar, .navBarMobiles {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+.navBar {
+    position: fixed;
+    left: 0;
+    right: 0;
     color: white;
-    width: 25vh;
-    min-height: 100vh;
+    width: 40%;
+    height: 7rem;
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.082),
         rgba(255, 255, 255, 0.055)
     );
+    background: rgba(42,43,56,.5);
     -webkit-backdrop-filter: blur(21px);
-    backdrop-filter: blur(21px);
+    backdrop-filter: blur(104px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5vh;
-    align-items: center;
-    justify-content: flex-start;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2vh;
-    position: fixed;
+    border-radius: 2rem;
+    border: 0.2rem solid #2a2b37;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navBarMobiles {
-    width: 100%;
+.emoji {
+    width: 5vh;
+    height: 5vh;
+    z-index: 2;
+    margin-bottom: .5rem;
 }
 
-.navBar img {
-    width: 14vh;
-    height: 14vh;
-    margin-bottom: 3vh;
+.iconNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+.nameImg {
+    -webkit-animation: logoLeftAnim 15s cubic-bezier(1,0,0,1) infinite;
+    animation: logoLeftAnim 15s ease-in-out infinite;
+    height: 1.5rem;
+    margin-top: .8rem;
 }
 
 
@@ -39,89 +63,136 @@
     transition: all ease-in-out .5s;
 }
 
-.active {
-    background-color: #14213d;
-    border: 2px solid #14213d;
-    padding: 1vh;
-}
-
-
-.container button {
-    font-size: 2.5vh;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    color: #FFFFFF;
-}
-
-.container:hover {
-    transform: scale(1.1);
-}
-
-.icons {
+.hamburger {
     display: flex;
     flex-direction: column;
-    row-gap: 2vh;
-    margin-top: 3vh;
-}
-
-.icons a {
-    background-color: transparent;
-    border: none;
-    appearance: none;
-    cursor: pointer;
-}
-
-.icon {
-    color: white;
-    transition: all ease-in-out .2s;
     width: 3rem;
     height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    z-index: 9999;
 }
 
-.icon:hover {
-    transform: scale(1.2);
+.hamburger > div {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
 }
 
+.open div:first-child {
+    transform: rotate(45deg);
+}
 
-@media(max-width: 800px) {
+.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.open div:last-child {
+    transform: rotate(-45deg);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+    font-size: 3rem;
+    transition: all .5s;
+    opacity: 0;
+}
+
+.menu a {
+    appearance: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.8rem;
+    line-height: 0%;
+    transition: all .5s;
+}
+
+.active {
+    opacity: 1;
+}
+
+.menu a:hover {
+    transform: scale(1.05);
+}
+
+@keyframes logoLeftAnim {
+    0% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translate(-110%, 0);
+    }
+
+    50%,
+    100% {
+        transform: translate(0%, 0);
+    }
+}
+
+@media (max-width: 1750px) {
     .navBar {
-        width: 100%;
-        min-height: 13vh;
-        flex-direction: row;
-        column-gap: 2vw;
-    }
-    
-    .navBar img {
-        margin-right: 7vw;
-        margin-bottom: 1vh;
-    }
-
-    .container button {
-        font-size: 2.2vw;
-    }
-
-    .points {
-        display: none;
-    }
-
-    .icons {
-        margin-top: 0;
-        margin-left: 7vw;
+        width: 50%;
     }
 }
 
-@media(max-width: 700px) {
-    .icons {
+@media (max-width: 1400px) {
+    .navBar {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navBar {
+        width: 70%;
+    }
+}
+
+@media (max-width: 950px) {
+    .navBar {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .navBar {
+        width: 90%;
+    }
+
+    .iconNav span {
         display: none;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
+    .navBar {
+        width: 90%;
+    }
 
-    .navBar img {
-        margin-right: 0;
-        width: 12vw;
-        height: 12vw;
+    .menu a {
+        font-size: 3.5vw;
+    }
+}
+
+@media(max-width: 450px) {
+    .emoji {
+        width: 4vh;
+        height: 4vh;
+        margin-bottom: 1rem;
+    }
+
+    .hamburger {
+        height: 2.5rem;
+        width: 2.5rem;
     }
 }

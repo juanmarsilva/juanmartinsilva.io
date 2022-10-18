@@ -1,9 +1,9 @@
-import React from 'react';
+import s from './Skills.module.css';
 
 const Skills = () => {
     return (
-        <div>
-            
+        <div className={s.container} id='skills' >
+            Skills
         </div>
     )
 }

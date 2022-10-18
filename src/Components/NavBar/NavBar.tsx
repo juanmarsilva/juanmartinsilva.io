@@ -1,125 +1,37 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import { WavyLink } from "react-wavy-transitions";
-import { MdMoreVert } from 'react-icons/md';
-import { FaLinkedinIn, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { Outlet } from 'react-router-dom';
 import emoji from '../../Images/emoji.png';
 import s from './NavBar.module.css';
+import name from '../../Images/Juan Martin Silva.png';
+import { useState } from 'react';
+import 'animate.css';
 
-const LINKEDIN = 'https://www.linkedin.com/in/juanmartinsilva';
-const WHATSAPP = 'https://walink.co/2c0354';
-const GITHUB = 'https://github.com/juanmarsilva';
+// const LINKEDIN = 'https://www.linkedin.com/in/juanmartinsilva';
+// const WHATSAPP = 'https://walink.co/2c0354';
+// const GITHUB = 'https://github.com/juanmarsilva';
 
 const NavBar = () => {
 
-    const location = useLocation();
+    const [ open, setOpen ] = useState<boolean>(false); 
 
     return (
         <div className={s.navBar}>
-            <WavyLink 
-                to='/'
-                color="#14213d" 
-                direction='up'
-            >
-                <img src={emoji} alt='emoji'></img>
-            </WavyLink>
-            <div className={location.pathname === '/' ? `${s.container} ${s.active}` : s.container}>
-                <WavyLink 
-                    to='/' 
-                    color="#14213d" 
-                    direction='down'
-                >
-                    Home
-                </WavyLink>
-            </div>
-            <MdMoreVert 
-                size='3vh' 
-                color='white' 
-                className={s.points} 
-            />
-            <div className={location.pathname === '/projects' ? `${s.container} ${s.active}` : s.container}>
-                <WavyLink 
-                    direction='up' 
-                    to="/projects" 
-                    color="#14213d"
-                >
-                    Projects
-                </WavyLink> 
-            </div>
-            <MdMoreVert 
-                size='3vh' 
-                color='white'  
-                className={s.points} 
-            />
-            <div className={location.pathname === '/skills' ? `${s.container} ${s.active}` : s.container}>
-                <WavyLink 
-                    direction='up' 
-                    to="/skills" 
-                    color="#14213d"
-                >
-                    Skills
-                </WavyLink>
-            </div>
-            <MdMoreVert 
-                size='3vh' 
-                color='white'  
-                className={s.points} 
-            />
-            <div className={location.pathname === '/about' ? `${s.container} ${s.active}` : s.container}>
-                <WavyLink 
-                    direction='up' 
-                    to="/about" 
-                    color="#14213d"
-                >
-                    About
-                </WavyLink>
-            </div>
-            <MdMoreVert 
-                size='3rem' 
-                color='white' 
-                className={s.points}  
-            />
-            <div className={location.pathname === '/contact' ? `${s.container} ${s.active}` : s.container}>
-                <WavyLink 
-                    direction='up' 
-                    to="/contact" 
-                    color="#14213d"
-                >
-                    Contact
-                </WavyLink>
-            </div>
+            <a className={s.iconNav} href='#home' >
+                <img src={emoji} alt='emoji' className={s.emoji} ></img>
 
-            <div className={s.icons} >
-                <a 
-                    href={ LINKEDIN } 
-                    target="_blank" 
-                    rel='noreferrer' 
-                >
-                    <FaLinkedinIn 
-                        // color='white' 
-                        className={s.icon}
-                    />
-                </a>
-                <a 
-                    href={ WHATSAPP } 
-                    target="_blank" 
-                    rel='noreferrer' 
-                >
-                    <FaWhatsapp 
-                        // color='white'  
-                        className={s.icon}
-                    />
-                </a>
-                <a 
-                    href={ GITHUB } 
-                    target="_blank" 
-                    rel='noreferrer' 
-                >
-                    <FaGithub 
-                        // color='white'  
-                        className={s.icon}
-                    />
-                </a>
+                <span className={s.name}><img src={name} alt="name" className={s.nameImg} /></span>
+            </a>
+        
+            <div className={open ? `${s.menu} ${s.active}` : s.menu}>
+                <a href='#projects'>PROJECTS</a>
+                <a href='#skills'>SKILLS</a>
+                <a href='#contact'>CONTACT</a>
             </div>
+            
+            <button className={open ? `${s.hamburger} ${s.open}` : s.hamburger} onClick={() => setOpen(!open)}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <Outlet />
         </div> 
     ) 

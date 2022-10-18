@@ -1,8 +1,10 @@
-import React from 'react';
+import s from './About.module.css';
 
 const About = () => {
     return (
-        <div></div>
+        <div className={s.container} id='about' >
+            About
+        </div>
     )
 }
 

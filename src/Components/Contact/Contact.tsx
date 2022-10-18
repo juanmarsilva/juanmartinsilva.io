@@ -1,8 +1,10 @@
-import React from 'react';
+import s from './Contact.module.css';
 
 const Contact = () => {
     return (
-        <div></div>
+        <div className={s.container} id='contact'>
+            Contact
+        </div>
     );
 };
 

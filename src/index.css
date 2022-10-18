@@ -12,7 +12,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #151418;
+  background-color: #10101a;
+  overflow-x: hidden;
+  background-size: 400% 400%;
 }
 
 

@@ -1,14 +1,22 @@
 import s from './Home.module.css';
-import imagen from '../../Images/Foto.jpg';
+import NavBar from '../NavBar/NavBar';
+import About from '../About/About';
+import Projects from '../Projects/Projects';
+import Skills from '../Skills/Skills';
+import Contact from '../Contact/Contact';
+
 
 const Home = () => {
     return (
-        <div className={s.container}>
-            <div className={s.principalPage}>
-                <img src={imagen} alt='imagen' className={s.img} />
-                <h1>{`< Juan Martin Silva />`}</h1>
+        <>
+            <NavBar />
+            <div className={s.container} id='home'>
+                <About />
+                <Projects />
+                <Skills />
+                <Contact />
             </div>
-        </div>
+        </>
     )
 }
 
