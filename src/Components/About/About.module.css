@@ -227,23 +227,26 @@
     }
 }
 
+@media(max-width: 450px ) {
+    .name, .lastName {
+        top: 47vh;
+    }
+
+    .dev {
+        top: 55vh;
+    }
+
+    .social {
+        top: 62vh;
+    }
+
+}
+
 
 @media(max-width: 400px) {
     .img {
         width: 15vh;
         height: 15vh;
-    }
-
-    .name, .lastName {
-        top: 45vh;
-    }
-
-    .dev {
-        top: 52vh;
-    }
-
-    .social {
-        top: 60vh;
     }
 
     .imgContainer button {
@@ -253,18 +256,10 @@
 }
 
 @media(max-width: 350px) {
-
     .name, .lastName {
         font-size: 12vw;
     }
-    
-    /* .dev {
-        top: 45.5vh;
-    }
-
-    .social {
-        top: 50vh;
-    } */
 }
+
 
 
