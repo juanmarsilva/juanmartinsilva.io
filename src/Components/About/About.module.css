@@ -235,15 +235,15 @@
     }
 
     .name, .lastName {
-        top: 40vh;
+        top: 45vh;
     }
 
     .dev {
-        top: 47vh;
+        top: 52vh;
     }
 
     .social {
-        top: 55vh;
+        top: 60vh;
     }
 
     .imgContainer button {
@@ -258,12 +258,13 @@
         font-size: 12vw;
     }
     
-    .dev {
+    /* .dev {
         top: 45.5vh;
     }
 
     .social {
         top: 50vh;
-    }
+    } */
 }
+
 
