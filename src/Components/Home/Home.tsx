@@ -8,6 +8,7 @@ import Contact from '../Contact/Contact';
 
 
 const Home = () => {
+
     return (
         <>
             <NavBar />

@@ -141,6 +141,25 @@
     transform: scale(1.1);
 }
 
+@media(max-width: 1550px) {
+    .img {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .name, .lastName {
+        top: 32vh;
+    }
+
+    .dev {
+        top: 52vh;
+    }
+
+    .social {
+        top: 67vh;
+    }
+}
+
 @media(max-width: 1000px) {
     .dev {
         top: 50vh;
@@ -228,20 +247,27 @@
 }
 
 @media(max-width: 450px ) {
+    .imgContainer {
+        top: 20vh;
+    }
+
     .name, .lastName {
-        top: 47vh;
+        top: 52vh;
+    }
+
+    .name, .lastName {
+        font-size: 12vw;
     }
 
     .dev {
-        top: 55vh;
+        top: 60vh;
     }
 
     .social {
-        top: 62vh;
+        top: 67vh;
     }
 
 }
-
 
 @media(max-width: 400px) {
     .img {
@@ -252,12 +278,6 @@
     .imgContainer button {
         font-size: 1.5rem;
         padding: .8rem;
-    }
-}
-
-@media(max-width: 350px) {
-    .name, .lastName {
-        font-size: 12vw;
     }
 }
 
