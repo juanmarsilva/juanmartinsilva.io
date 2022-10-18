@@ -6,7 +6,7 @@
     color: white;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-items: center;
@@ -78,7 +78,7 @@
 .name { 
     grid-area: 2 / 3 / 3 / 6; 
     position: absolute;
-    top: 28vh;
+    top: 40vh;
     right: 17vw;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -91,8 +91,8 @@
 .lastName { 
     grid-area: 3 / 3 / 4 / 6;
     position: absolute;
-    right: 30vw;
-    top: 28vh;
+    right: 29vw;
+    top: 40vh;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -113,7 +113,7 @@
     color: rgba(255, 255, 255, 0.582);
     position: absolute;
     right: 17vw;
-    top: 40vh;
+    top: 55vh;
 }
 
 .social { 
@@ -123,7 +123,7 @@
     column-gap: 2rem;
     position: absolute;
     right: 31vw;
-    top: 50vh;
+    top: 65vh;
 }
 
 .social a {
@@ -141,4 +141,129 @@
     transform: scale(1.1);
 }
 
+@media(max-width: 1000px) {
+    .dev {
+        top: 50vh;
+    }
+
+    .social {
+        top: 57vh;
+        right: 29vw;
+    }
+}
+
+
+@media(max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgContainer {
+        position: absolute;
+        top: 15vh;
+    }
+
+    .name, .lastName, .social, .dev {
+        right: auto;
+        font-size: 9vw;
+    }
+
+    .name, .lastName {
+        top: 55vh;
+    }
+
+    .dev {
+        top: 65vh;
+        font-size: 7vw;
+    }
+
+    .social {
+        top: 75vh;
+    }
+}
+
+
+@media(max-width: 600px) {
+    .img {
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .name, .lastName {
+        top: 50vh;
+    }
+
+    .dev {
+        top: 60vh;
+    }
+
+    .social {
+        top: 70vh;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .img {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .name, .lastName {
+        top: 45vh;
+        font-size: 11vw;
+    }
+
+    .dev {
+        top: 54vh;
+        font-size: 6vw;
+    }
+
+    .social {
+        top: 60vh;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .img {
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .name, .lastName {
+        top: 40vh;
+    }
+
+    .dev {
+        top: 47vh;
+    }
+
+    .social {
+        top: 55vh;
+    }
+
+    .imgContainer button {
+        font-size: 1.5rem;
+        padding: .8rem;
+    }
+}
+
+@media(max-width: 350px) {
+
+    .name, .lastName {
+        font-size: 12vw;
+    }
+    
+    .dev {
+        top: 45.5vh;
+    }
+
+    .social {
+        top: 50vh;
+    }
+}
 
