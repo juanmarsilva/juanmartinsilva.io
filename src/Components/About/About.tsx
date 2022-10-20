@@ -3,10 +3,17 @@ import image from '../../Images/Foto.jpg';
 import { FaLinkedinIn, FaWhatsapp, FaGithub, FaInstagram} from 'react-icons/fa';
 import pdf from '../../CV/CV - Juan Martin Silva.pdf';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
+import 'animate.css';
+
+
+const WHATSAPP = 'https://walink.co/1be6e5';
+const INSTAGRAM = 'https://www.instagram.com/juanmarsilva/';
+const GITHUB = 'https://github.com/juanmarsilva';
+const LINKEDIN = 'https://www.linkedin.com/in/juanmartinsilva/';
 
 const About = () => {
     return (
-        <div className={s.container} id='about' >
+        <div className={`${s.container} animate__animated animate__fadeIn animate__delay-1s`} id='about' >
             <h1 className={s.name} >JUAN MARTIN</h1>
             <h1 className={s.lastName} >SILVA</h1>
             <h1 className={s.dev} >FULL STACK DEVELOPER</h1>
@@ -20,10 +27,10 @@ const About = () => {
                 </button>
             </div>
             <div className={s.social} >
-                <a href='/' target='_blank' rel='noopener noreferrer'><FaLinkedinIn className={s.icon} /></a>
-                <a href='/' target='_blank' rel='noopener noreferrer'><FaWhatsapp className={s.icon} /></a>
-                <a href='/' target='_blank' rel='noopener noreferrer'><FaGithub className={s.icon} /></a>
-                <a href='/' target='_blank' rel='noopener noreferrer'><FaInstagram className={s.icon} /></a>
+                <a href={LINKEDIN} target='_blank' rel='noopener noreferrer'><FaLinkedinIn className={s.icon} /></a>
+                <a href={WHATSAPP} target='_blank' rel='noopener noreferrer'><FaWhatsapp className={s.icon} /></a>
+                <a href={GITHUB} target='_blank' rel='noopener noreferrer'><FaGithub className={s.icon} /></a>
+                <a href={INSTAGRAM} target='_blank' rel='noopener noreferrer'><FaInstagram className={s.icon} /></a>
             </div>
         </div>
     )

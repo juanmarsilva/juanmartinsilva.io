@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 5s;
+}
+
 .emoji {
     width: 5vh;
     height: 5vh;

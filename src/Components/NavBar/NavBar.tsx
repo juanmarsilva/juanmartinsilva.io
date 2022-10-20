@@ -14,7 +14,7 @@ const NavBar = () => {
     const [ open, setOpen ] = useState<boolean>(false); 
 
     return (
-        <div className={s.navBar}>
+        <div className={`${s.navBar} animate__animated animate__fadeInDown`} >
             <a className={s.iconNav} href='#home' >
                 <img src={emoji} alt='emoji' className={s.emoji} ></img>
 
@@ -22,8 +22,8 @@ const NavBar = () => {
             </a>
         
             <div className={open ? `${s.menu} ${s.active}` : s.menu}>
-                <a href='#projects'>PROJECTS</a>
                 <a href='#skills'>SKILLS</a>
+                <a href='#projects'>PROJECTS</a>
                 <a href='#contact'>CONTACT</a>
             </div>
             
