@@ -8,19 +8,27 @@ import Contact from '../Contact/Contact';
 // import Spotify from '../Spotify/Spotify';
 import 'animate.css';
 import Landing from '../Landing/Landing';
+import AOS from 'aos';
 
 
 const Home = () => {
 
-    const [ landing, setLanding ] = useState<boolean>(true);
+    // const [ landing, setLanding ] = useState<boolean>(true);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setLanding(false);
+    //     }, 5000)
+    // }, [])
 
     useEffect(() => {
-        setTimeout(() => {
-            setLanding(false);
-        }, 4000)
+        AOS.init({
+            duration: 2000
+        })
     }, [])
 
-    if(landing) return <Landing />
+    // if(landing) return <Landing />
+
 
     return (
         <>

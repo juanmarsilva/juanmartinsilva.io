@@ -5,10 +5,6 @@ import name from '../../Images/Juan Martin Silva.png';
 import { useState } from 'react';
 import 'animate.css';
 
-// const LINKEDIN = 'https://www.linkedin.com/in/juanmartinsilva';
-// const WHATSAPP = 'https://walink.co/2c0354';
-// const GITHUB = 'https://github.com/juanmarsilva';
-
 const NavBar = () => {
 
     const [ open, setOpen ] = useState<boolean>(false); 
@@ -23,8 +19,8 @@ const NavBar = () => {
         
             <div className={open ? `${s.menu} ${s.active}` : s.menu}>
                 <a href='#skills'>SKILLS</a>
-                <a href='#projects'>PROJECTS</a>
-                <a href='#contact'>CONTACT</a>
+                <a href='#projects'>PROYECTOS</a>
+                <a href='#contact'>CONTACTO</a>
             </div>
             
             <button className={open ? `${s.hamburger} ${s.open}` : s.hamburger} onClick={() => setOpen(!open)}>
