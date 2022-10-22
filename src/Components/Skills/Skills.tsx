@@ -21,12 +21,19 @@ const Skills = () => {
                 <div className={s.skills}>
                     <div className={s.texts} data-aos="fade-right" >
                         <p>
-                            Hola👋, mi nombre es Juan Martin. Desarrollador Web Full Stack. Apasionado por el desarrollo web y de aplicaciones moviles, principalmente del lado del usuario creando interfaces visuales y totalmente funcionales.
+                            Hola👋, mi nombre es Juan Martin. Desarrollador Web Full Stack. Apasionado por el desarrollo web y de aplicaciones moviles, creando interfaces visuales agradables y totalmente funcionales para el usuario.
                         </p>
                         <br />
                         <br />
+                        <br />
                         <p>
-
+                            Me apasiona aprender, creo que cada dia te da la oportunidad de aprender algo nuevo y esta es una de las razones por las que amo esta profesion, porque cada dia aprendo algo nuevo.
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <p>
+                            Me gusta trabajar en equipo y creo que es una de las mejores maneras de aprender, en equipo y ayudandonos unos a otros a mejorar.
                         </p>
                     </div>
                     <div className={s.iconsSkills} data-aos="fade-left">

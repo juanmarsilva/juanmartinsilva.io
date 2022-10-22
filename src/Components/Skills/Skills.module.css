@@ -45,7 +45,7 @@
     font-family: 'Circular Std Book',sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.7vh;
+    font-size: 1.7rem;
     line-height: 2.2rem;
     color: rgba(255, 255, 255, 0.582);
 }
@@ -78,3 +78,6 @@
     color: rgba(255, 255, 255, 0.582);
 }
 
+@media(max-width: 1000px) {
+  
+}
