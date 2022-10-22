@@ -1,6 +1,15 @@
 
 @import url('http://fonts.cdnfonts.com/css/circular-std-book');
 
+:root {
+    --color-white: #fff;
+    --color-gray: #c4c4c4;
+    --color-black: #000;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -103,10 +112,13 @@
     font-weight: 400;
     font-size: 6vw;
     text-align: center;
-    background: -webkit-linear-gradient(0deg, rgba(0,102,177,1) 0%, rgba(135,0,68,1) 100%);
+    background: linear-gradient(-45deg,rgba(0,102,177,1),rgba(135,0,68,1),rgba(0,102,177,1),rgba(135,0,68,1));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background-size: 400% 400%;
+    -webkit-animation: gradient 4s ease infinite;
+    animation: gradient 4s ease infinite;
 }
 
 .dev { 
@@ -137,14 +149,28 @@
 }
 
 .icon {
-    width: 3vh;
-    height: 3vh;
+    width: 3rem;
+    height: 3rem;
     color: white;
     transition: all .5s;
 }
 
 .icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    color: rgb(0, 49, 83);
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 @media(max-width: 1550px) {

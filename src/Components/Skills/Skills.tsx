@@ -27,13 +27,13 @@ const Skills = () => {
                         <br />
                         <br />
                         <p>
-                            Me apasiona aprender, creo que cada dia te da la oportunidad de aprender algo nuevo y esta es una de las razones por las que amo esta profesion, porque cada dia aprendo algo nuevo.
+                            Me apasiona aprender, creo que cada dia te da la oportunidad de aprender algo nuevo y esta es una de las razones por las que amo esta profesion.
                         </p>
                         <br />
                         <br />
                         <br />
                         <p>
-                            Me gusta trabajar en equipo y creo que es una de las mejores maneras de aprender, en equipo y ayudandonos unos a otros a mejorar.
+                            Me considero una persona muy comprometida, con iniciativa y muy curiosa. Me gusta trabajar en equipo, creo mucho en el aprendizaje colaborativo. Me gusta resolver problemas de todo tipo, y lo que mas me gusta de esta profesión es que cada día es un nuevo desafío, cada día surge un nuevo "obstáculo" por así decirlo, que nos forma y nos hace crecer día a día como mejores personas, y también como mejores desarrolladores.
                         </p>
                     </div>
                     <div className={s.iconsSkills} data-aos="fade-left">

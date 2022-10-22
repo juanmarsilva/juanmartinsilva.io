@@ -7,7 +7,8 @@
 }
 
 .card {
-    width: 70%;
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -20,14 +21,15 @@
     font-family: 'Circular Std Book',sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 5vh;
+    font-size: 5.5vh;
     color: rgba(255, 255, 255, 0.582);
-    position: absolute;
-    top: 120vh;
-    background: -webkit-linear-gradient(0deg, rgba(0,102,177,1) 0%, rgba(135,0,68,1) 100%);
+    background-clip: text;
+    background: linear-gradient(-45deg,rgba(0,102,177,1),rgba(135,0,68,1),rgba(0,102,177,1),rgba(135,0,68,1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background-size: 400% 400%;
+    -webkit-animation: gradient 4s ease infinite;
+    animation: gradient 4s ease infinite;
 }
 
 .skills {
@@ -74,10 +76,30 @@
     font-family: 'Circular Std Book',sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5vh;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.582);
 }
 
-@media(max-width: 1000px) {
-  
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@media(max-width: 850px) {
+    .skills {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .texts, .iconsSkills{
+        width: 100%;
+    }
 }

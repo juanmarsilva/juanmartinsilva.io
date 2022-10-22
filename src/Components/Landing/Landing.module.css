@@ -53,7 +53,7 @@
 .block {
   width: 0%;
   height: inherit;
-  background:  rgb(78, 0, 39);
+  background:  rgb(0, 49, 83);
   position: absolute;
   animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
   animation-delay: 2s;
