@@ -32,6 +32,13 @@ const About = () => {
                 <a href={GITHUB} target='_blank' rel='noopener noreferrer'><FaGithub className={s.icon} /></a>
                 <a href={INSTAGRAM} target='_blank' rel='noopener noreferrer'><FaInstagram className={s.icon} /></a>
             </div>
+            <a className={s.mouse_scroll} href="#home"> 
+                <span className={s.mouse} >
+                    <span className={s.mouse_movement}> 
+                    </span>
+                </span>
+                <span className={`${s.mouse_message} fadeIn`}>scroll</span> 
+            </a>
         </div>
     )
 }

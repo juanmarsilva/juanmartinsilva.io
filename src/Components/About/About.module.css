@@ -160,6 +160,61 @@
     color: rgb(0, 49, 83);
 }
 
+.mouse {
+    position: relative;
+    display: block;
+    width: 46px;
+    height: 73px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #FFF;
+    border-radius: 23px;
+}
+
+.mouse_movement { 
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #FFF;
+    border-radius: 50%;
+    -webkit-animation: scroll-ani 4s linear infinite;
+    -moz-animation: scroll-ani 4s linear infinite;
+    animation: scroll-ani 4s linear infinite;
+} 
+.mouse_scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #7F8C8D;
+    color: #FFF;
+    font-family: 'Circular Std Book',sans-serif;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-decoration: none;
+    overflow: hidden;
+    position: absolute;
+    top: 75vh;
+    left: 18.5vw;
+}
+
+.mouse_message { 
+    float: left;
+    margin: 0 0 0 7px;
+    padding: 0;
+    -webkit-animation: scroll-ani 4s linear infinite;
+    -moz-animation: scroll-ani 4s linear infinite;
+    animation: scroll-ani 4s linear infinite;
+}
 
 @keyframes gradient {
     0% {
@@ -170,6 +225,63 @@
     }
     100% {
         background-position: 0 50%;
+    }
+}
+
+@-webkit-keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@-moz-keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
     }
 }
 
@@ -253,6 +365,10 @@
 
     .social {
         top: 70vh;
+    }
+
+    .mouse_scroll {
+        left: 45%;
     }
 }
 

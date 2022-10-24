@@ -99,6 +99,10 @@
         row-gap: 3rem;
     }
 
+    .container {
+        height: max-content;
+    }
+
     .texts, .iconsSkills{
         width: 100%;
     }
