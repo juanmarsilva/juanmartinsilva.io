@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.9",
@@ -10,11 +11,12 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.65",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "dotenv": "^16.0.3",
+    "emailjs": "^4.0.1",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
@@ -23,6 +25,7 @@
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "react-wavy-transitions": "^1.1.1",
+    "sweetalert": "^2.1.2",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
@@ -51,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4"
+    "@types/aos": "^3.0.4",
+    "@types/node": "^18.11.4"
   }
 }
