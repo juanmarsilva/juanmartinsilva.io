@@ -140,8 +140,8 @@
 
 @media(max-width: 500px) {
     .card {
-        width: 70vw;
-        height: 35vh;
+        width: 80vw;
+        height: 45vh;
     }
 }
 
