@@ -375,17 +375,17 @@
     }
 
     .name, .lastName {
-        top: 66vh;
+        top: 68vh;
         font-size: 11vw;
     }
 
     .dev {
-        top: 75vh;
+        top: 77vh;
         font-size: 6vw;
     }
 
     .social {
-        top: 82vh;
+        top: 84vh;
     }
 }
 

@@ -128,7 +128,8 @@ const Contact = () => {
                     <span>Escanea el siguiente código QR y agrégame👇</span>
                     <img src={qr} alt="qr" className={s.qr} />
                 </div>
-                
+
+                <div></div>
             </form>
         </div>
     );
