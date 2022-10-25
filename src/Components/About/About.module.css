@@ -37,6 +37,7 @@
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15rem;
 }
 
 .imgContainer button {
@@ -202,9 +203,7 @@
     font-size: 2rem;
     text-decoration: none;
     overflow: hidden;
-    position: absolute;
-    top: 75vh;
-    left: 18.5vw;
+    margin-top: 3rem;
 }
 
 .mouse_message { 
@@ -287,12 +286,12 @@
 
 @media(max-width: 1550px) {
     .img {
-        height: 40vh;
-        width: 40vh;
+        height: 35vh;
+        width: 35vh;
     }
 
     .name, .lastName {
-        top: 32vh;
+        top: 37vh;
     }
 
     .dev {
@@ -326,7 +325,7 @@
 
     .imgContainer {
         position: absolute;
-        top: 15vh;
+        top: 0vh;
     }
 
     .name, .lastName, .social, .dev {
@@ -335,16 +334,16 @@
     }
 
     .name, .lastName {
-        top: 55vh;
+        top: 73vh;
     }
 
     .dev {
-        top: 65vh;
+        top: 81vh;
         font-size: 7vw;
     }
 
     .social {
-        top: 75vh;
+        top: 88vh;
     }
 }
 
@@ -356,19 +355,15 @@
     }
 
     .name, .lastName {
-        top: 50vh;
+        top: 65vh;
     }
 
     .dev {
-        top: 60vh;
+        top: 73vh;
     }
 
     .social {
-        top: 70vh;
-    }
-
-    .mouse_scroll {
-        left: 45%;
+        top: 79vh;
     }
 }
 
@@ -380,44 +375,32 @@
     }
 
     .name, .lastName {
-        top: 45vh;
+        top: 60vh;
         font-size: 11vw;
     }
 
     .dev {
-        top: 54vh;
+        top: 69vh;
         font-size: 6vw;
     }
 
     .social {
-        top: 60vh;
+        top: 76vh;
     }
 }
 
 @media(max-width: 450px ) {
     .imgContainer {
-        top: 20vh;
-    }
-
-    .name, .lastName {
-        top: 52vh;
+        top: 3vh;
     }
 
     .name, .lastName {
         font-size: 12vw;
     }
 
-    .dev {
-        top: 60vh;
-    }
-
-    .social {
-        top: 67vh;
-    }
-
     .img {
-        width: 15vh;
-        height: 15vh;
+        width: 17vh;
+        height: 17vh;
     }
 
     .imgContainer button {

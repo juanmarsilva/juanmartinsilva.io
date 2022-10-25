@@ -124,7 +124,10 @@ const Contact = () => {
                     </button>
                 </div>
                 
-                <img data-aos="fade-left" src={qr} alt="qr" className={s.qr} />
+                <div className={s.containerQR} data-aos="fade-left">
+                    <span>Escanea el siguiente código QR y agrégame👇</span>
+                    <img src={qr} alt="qr" className={s.qr} />
+                </div>
                 
             </form>
         </div>
