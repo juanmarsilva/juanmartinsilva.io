@@ -13,13 +13,13 @@ import AOS from 'aos';
 
 const Home = () => {
 
-    // const [ landing, setLanding ] = useState<boolean>(true);
+    const [ landing, setLanding ] = useState<boolean>(true);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setLanding(false);
-    //     }, 5000)
-    // }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setLanding(false);
+        }, 5000)
+    }, [])
 
     useEffect(() => {
         AOS.init({
@@ -27,7 +27,7 @@ const Home = () => {
         })
     }, [])
 
-    // if(landing) return <Landing />
+    if(landing) return <Landing />
 
     return (
         <>
