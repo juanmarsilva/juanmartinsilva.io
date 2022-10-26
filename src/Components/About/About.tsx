@@ -1,10 +1,11 @@
 import s from './About.module.css';
 import image from '../../Images/Foto.jpg';
 import { FaLinkedinIn, FaWhatsapp, FaGithub, FaInstagram} from 'react-icons/fa';
-import pdf from '../../CV/CV - Juan Martin Silva.pdf';
+import cv_es from '../../CV/CV - Juan Martin Silva.pdf';
+import cv_en from '../../CV/CV - Juan Martin Silva - en.pdf';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 import 'animate.css';
-
 
 const WHATSAPP = 'https://walink.co/1be6e5';
 const INSTAGRAM = 'https://www.instagram.com/juanmarsilva/';
@@ -12,17 +13,28 @@ const GITHUB = 'https://github.com/juanmarsilva';
 const LINKEDIN = 'https://www.linkedin.com/in/juanmartinsilva/';
 
 const About = () => {
+
+    const [ t, i18n ] = useTranslation("global");
+
+    // const handleClick = (e: any, leng:string) => {
+    //     e.preventDefault();
+    //     localStorage.setItem("lenguage", leng);
+    //     i18n.changeLanguage(leng);
+    // }
+
     return (
         <div className={`${s.container} animate__animated animate__fadeIn animate__delay-1s`} id='about' >
+            {/* <button onClick={(e) => handleClick(e, "en") }>EN</button>
+            <button onClick={(e) => handleClick(e, "es")}>ES</button> */}
             <h1 className={s.name} >JUAN MARTIN</h1>
             <h1 className={s.lastName} >SILVA</h1>
             <h1 className={s.dev} >FULL STACK DEVELOPER</h1>
             <div className={s.imgContainer}>
                 <img src={image} alt="img"  className={s.img} />
                 <button>
-                    <a href={pdf} target='_blank' rel="noopener noreferrer" download='CV-Juan Martin Silva'>
+                    <a href={i18n.language === 'en' ? cv_en : cv_es} target='_blank' rel="noopener noreferrer" download='CV-Juan Martin Silva'>
                         <AiOutlineCloudDownload color='white' size='3rem' />
-                        CV
+                        {t<string>("About.CV")}
                     </a>
                 </button>
                 <a className={s.mouse_scroll} href="#home"> 

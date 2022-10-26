@@ -11,29 +11,33 @@ import react from '../../Images/Iconos/react.png';
 import redux from '../../Images/Iconos/redux.png';
 import seq from '../../Images/Iconos/seq.png';
 import ts from '../../Images/Iconos/ts.png';
+import { useTranslation } from 'react-i18next';
 import 'animate.css';
 
 const Skills = () => {
+
+    const [ t ] = useTranslation("global");
+
     return (
         <div className={s.container} id='skills' >
             <div className={s.card} >
-                <h1 className={s.title} data-aos="fade-down">Un poco sobre mi..</h1>
+                <h1 className={s.title} data-aos="fade-down">{t<string>("Skills.About.title")}</h1>
                 <div className={s.skills}>
                     <div className={s.texts} data-aos="fade-right" >
                         <p>
-                            Hola👋, mi nombre es Juan Martin. Desarrollador Web Full Stack. Apasionado por el desarrollo web y de aplicaciones moviles, creando interfaces visuales agradables y totalmente funcionales para el usuario.
+                            {t<string>("Skills.About.first")}
                         </p>
                         <br />
                         <br />
                         <br />
                         <p>
-                            Me apasiona aprender, creo que cada dia te da la oportunidad de aprender algo nuevo y esta es una de las razones por las que amo esta profesion.
+                            {t<string>("Skills.About.second")}
                         </p>
                         <br />
                         <br />
                         <br />
                         <p>
-                            Me considero una persona muy comprometida, con iniciativa y muy curiosa. Me gusta trabajar en equipo, creo mucho en el aprendizaje colaborativo. Me gusta resolver problemas de todo tipo, y lo que mas me gusta de esta profesión es que cada día es un nuevo desafío, cada día surge un nuevo "obstáculo" por así decirlo, que nos forma y nos hace crecer día a día como mejores personas, y también como mejores desarrolladores.
+                            {t<string>("Skills.About.three")}
                         </p>
                     </div>
                     <div className={s.iconsSkills} data-aos="fade-left">

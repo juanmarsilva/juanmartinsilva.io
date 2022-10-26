@@ -3,6 +3,7 @@ import pokeapp from '../../Images/Projects/pokeapp.jpg';
 import letsgo from '../../Images/Projects/letsgo.jpg';
 import { HiLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const pokeapp_link = 'https://poke-app-sooty.vercel.app/';
 const pokeapp_github = 'https://github.com/juanmarsilva/pokeApp';
@@ -11,9 +12,12 @@ const letsgo_github = 'https://github.com/LetTeam22/lets-GO';
 
 
 const Projects = () => {
+
+    const [t] = useTranslation("global");
+
     return (
         <div className={s.container} id='projects'>
-            <h1 className={s.title} data-aos="fade-down">Mis Proyectos</h1>
+            <h1 className={s.title} data-aos="fade-down">{t<string>("Projects.title")}</h1>
             <div className={s.containerCards}>
                 <div className={s.card} data-aos="fade-right">
                     <div className={s.info}>

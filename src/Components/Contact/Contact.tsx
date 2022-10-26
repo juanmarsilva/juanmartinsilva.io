@@ -8,6 +8,7 @@ import { BiMessageEdit, BiUser } from 'react-icons/bi';
 import { TbSend } from 'react-icons/tb';
 import swal from 'sweetalert';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 interface input {
     name: string,
@@ -23,8 +24,7 @@ const PUBLIC_KEY = 'cbH31wOrf_dEqnPIh';
 const Contact = () => {
 
     const form = useRef<any>();
-
-    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
+    const [ t ] = useTranslation("global");
 
     const [ input, setInput ] = useState<input>({
         name: '',
@@ -36,16 +36,15 @@ const Contact = () => {
     const sendEmail = () => {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
             .then((result) => {
-                console.log(form.current);
                 swal({
-                    title: "Mensaje enviado correctamente!",
-                    text: "Muchas gracias por contactarte conmigo, pronto contestare tu mensaje",
+                    title: t<string>("Contact.swal.success.title"),
+                    text: t<string>("Contact.swal.success.text"),
                     icon: "success",
                 })
             }, (error) => {
                 swal({
-                    title: "Algo salio mal",
-                    text: "Algo salio mal, por favor contactame a traves de alguna de mis redes sociales. Muchas gracias!",
+                    title: t<string>("Contact.swal.error.title"),
+                    text: t<string>("Contact.swal.error.text"),
                     icon: "error",
                 })
             })
@@ -72,7 +71,7 @@ const Contact = () => {
 
     return (
         <div className={s.container} id='contact'>
-            <h1 className={s.title} data-aos="fade-down" >Contacto</h1>
+            <h1 className={s.title} data-aos="fade-down" >{t<string>("Contact.title")}</h1>
             <form ref={form} >
                 <div className={s.inputs} data-aos="fade-right"  >
                     <div className={s.containerInput} >
@@ -82,7 +81,7 @@ const Contact = () => {
                             type="text" 
                             onChange={e => handleChange(e)} 
                             name='name' 
-                            placeholder='Ingrese su nombre..' 
+                            placeholder={t<string>("Contact.inputs.name")} 
                             value={input.name}
                         />
                     </div>
@@ -91,7 +90,7 @@ const Contact = () => {
                         <input 
                             required 
                             type="text" 
-                            placeholder='Ingrese su correo..' 
+                            placeholder={t<string>("Contact.inputs.email")}
                             onChange={e => handleChange(e)} 
                             name='email' 
                             value={input.email} 
@@ -102,7 +101,7 @@ const Contact = () => {
                         <input 
                             required 
                             type="number" 
-                            placeholder='Ingrese su numero de telefono..' 
+                            placeholder={t<string>("Contact.inputs.phone")}
                             onChange={e => handleChange(e)} 
                             name='phone' 
                             value={input.phone}
@@ -111,7 +110,7 @@ const Contact = () => {
                     <div className={s.containerInput} >
                         <BiMessageEdit className={s.icon} />
                         <textarea
-                            placeholder='Ingrese su mensaje..' 
+                            placeholder={t<string>("Contact.inputs.message")}
                             onChange={(e) => handleChange(e)}  
                             name='message' 
                             value={input.message}
@@ -120,12 +119,12 @@ const Contact = () => {
                     </div>
                     <button className={s.sendBtn} onClick={(e) => handleClick(e)} >
                         <TbSend className={s.icon} />
-                        ENVIAR
+                        {t<string>("Contact.inputs.btn")}
                     </button>
                 </div>
                 
                 <div className={s.containerQR} data-aos="fade-left">
-                    <span>Escanea el siguiente código QR y agrégame👇</span>
+                    <span>{t<string>("Contact.inputs.qr")}</span>
                     <img src={qr} alt="qr" className={s.qr} />
                 </div>
 

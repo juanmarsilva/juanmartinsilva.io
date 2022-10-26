@@ -200,4 +200,20 @@
         height: 2.5rem;
         width: 2.5rem;
     }
+
+    .navBar {
+        width: 400px;
+    }
+}
+
+@media(max-width: 400px) {
+    .navBar {
+        width: 350px;
+    }
+}
+
+@media(max-width: 350px) {
+    .navBar {
+        width: 300px;
+    }
 }
