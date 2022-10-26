@@ -34,8 +34,8 @@ form {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400% 400%;
-    -webkit-animation: gradient 4s ease infinite;
-    animation: gradient 4s ease infinite;
+    -webkit-animation: gradient 6s ease infinite;
+    animation: gradient 6s ease infinite;
     text-align: center;
 }
 
