@@ -1,5 +1,4 @@
 import s from './Projects.module.css';
-import pokeapp from '../../Images/Projects/pokeapp.jpg';
 import { HiLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
