@@ -1,6 +1,5 @@
 import s from './Projects.module.css';
 import pokeapp from '../../Images/Projects/pokeapp.jpg';
-import letsgo from '../../Images/Projects/letsgo.jpg';
 import { HiLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -10,6 +9,8 @@ const pokeapp_github = 'https://github.com/juanmarsilva/pokeApp';
 const letsgo_link = 'https://pf-let.vercel.app/';
 const letsgo_github = 'https://github.com/LetTeam22/lets-GO';
 
+const pokeapp_video = 'https://res.cloudinary.com/letsgo12/video/upload/v1666823712/pokeapp_tl45vw.mp4';
+const letsgo_video = 'https://res.cloudinary.com/letsgo12/video/upload/v1666805313/y2mate.com_-_lets_GO_1080p_n3ctwn.mp4';
 
 const Projects = () => {
 
@@ -30,7 +31,7 @@ const Projects = () => {
                                 <FaGithub className={s.icon} />
                             </a>
                         </div>
-                        <img src={pokeapp} alt="pokeapp" className={s.imgProject} />
+                        <video src={pokeapp_video} className={s.pokeapp} autoPlay muted controls></video>
                     </div>
                 </div>
                 <div className={s.card} data-aos="fade-left">
@@ -44,7 +45,7 @@ const Projects = () => {
                                 <FaGithub className={s.icon} />
                             </a>
                         </div>
-                        <img src={letsgo} alt="letsgo" className={s.imgProject} />
+                        <video src={letsgo_video} className={s.letsgo} autoPlay muted controls></video>
                     </div>
                 </div>
             </div>

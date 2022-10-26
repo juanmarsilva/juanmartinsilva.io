@@ -27,7 +27,7 @@ const Switch = () => {
             <button className={s.btn} onClick={(e) => handleClick(e, 'en')} >
                 <img src={eeuu} alt='eeuu' className={s.icon} ></img>
             </button>
-            <div className={lenguage === 'es' ? `${s.indicator} ${s.arg}` : `${s.indicator} ${s.eeuu}`}></div>
+            <div className={lenguage === 'es' ? `${s.indicator} ${s.arg}` : `${s.indicator} ${s.eeuu}`} onClick={(e) => handleClick(e, leng === 'es' ? 'en' : 'es')}></div>
         </div>
     )
 }

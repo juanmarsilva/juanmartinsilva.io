@@ -62,7 +62,6 @@ form {
 }
 
 
-
 .containerInput input {
     font-family: 'Circular Std Book',sans-serif;
     font-style: normal;
@@ -78,7 +77,9 @@ form {
     border-radius: 1rem;
     color: white;
     padding-left: 1rem;
-}    
+}
+
+
 
 .containerInput input:hover, .containerInput textarea:hover, input:active, input:focus, textarea:focus, textarea:active {
     background: rgba(33, 34, 44, 0.5);

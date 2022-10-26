@@ -17,9 +17,16 @@ const NavBar = () => {
             </a>
         
             <div className={open ? `${s.menu} ${s.active}` : s.menu}>
-                <a href='#skills'>SKILLS</a>
-                <a href='#projects'>{t<string>("NavBar.Projects")}</a>
-                <a href='#contact'>{t<string>("NavBar.Contact")}</a>
+                {
+                    open
+                    ? <>
+                        <a href='#skills'>SKILLS</a>
+                        <a href='#projects'>{t<string>("NavBar.Projects")}</a>
+                        <a href='#contact'>{t<string>("NavBar.Contact")}</a>
+                    </>
+                    : <></>
+                }
+                
             </div>
             
             <button className={open ? `${s.hamburger} ${s.open}` : s.hamburger} onClick={() => setOpen(!open)}>
