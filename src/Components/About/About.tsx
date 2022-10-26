@@ -5,6 +5,7 @@ import cv_es from '../../CV/CV - Juan Martin Silva.pdf';
 import cv_en from '../../CV/CV - Juan Martin Silva - en.pdf';
 import { AiOutlineCloudDownload } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
+import Switch from '../Switch/Switch';
 import 'animate.css';
 
 const WHATSAPP = 'https://walink.co/1be6e5';
@@ -16,16 +17,10 @@ const About = () => {
 
     const [ t, i18n ] = useTranslation("global");
 
-    // const handleClick = (e: any, leng:string) => {
-    //     e.preventDefault();
-    //     localStorage.setItem("lenguage", leng);
-    //     i18n.changeLanguage(leng);
-    // }
 
     return (
         <div className={`${s.container} animate__animated animate__fadeIn animate__delay-1s`} id='about' >
-            {/* <button onClick={(e) => handleClick(e, "en") }>EN</button>
-            <button onClick={(e) => handleClick(e, "es")}>ES</button> */}
+            <Switch />
             <h1 className={s.name} >JUAN MARTIN</h1>
             <h1 className={s.lastName} >SILVA</h1>
             <h1 className={s.dev} >FULL STACK DEVELOPER</h1>
@@ -51,7 +46,6 @@ const About = () => {
                 <a href={GITHUB} target='_blank' rel='noopener noreferrer'><FaGithub className={s.icon} /></a>
                 <a href={INSTAGRAM} target='_blank' rel='noopener noreferrer'><FaInstagram className={s.icon} /></a>
             </div>
-            
         </div>
     )
 }
