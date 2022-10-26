@@ -203,6 +203,9 @@
 
     .navBar {
         width: 400px;
+        margin: 0;
+        left: 3%;
+        top: 3%;
     }
 }
 
