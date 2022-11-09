@@ -117,7 +117,11 @@ const Contact = () => {
                             className={s.textarea}
                         />
                     </div>
-                    <button className={s.sendBtn} onClick={(e) => handleClick(e)} >
+                    <button 
+                        className={s.sendBtn} 
+                        onClick={(e) => handleClick(e)}
+                        disabled={input.name === '' || input.email === '' || input.message === '' ? true : false} 
+                    >
                         <TbSend className={s.icon} />
                         {t<string>("Contact.inputs.btn")}
                     </button>

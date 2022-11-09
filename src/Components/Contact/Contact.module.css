@@ -61,7 +61,6 @@ form {
     color: white;
 }
 
-
 .containerInput input {
     font-family: 'Circular Std Book',sans-serif;
     font-style: normal;
@@ -79,13 +78,10 @@ form {
     padding-left: 1rem;
 }
 
-
-
 .containerInput input:hover, .containerInput textarea:hover, input:active, input:focus, textarea:focus, textarea:active {
     background: rgba(33, 34, 44, 0.5);
     outline: none;
 }
-
 
 .sendBtn {
     appearance: none;
@@ -105,11 +101,22 @@ form {
     justify-content: center;
     column-gap: 1rem;
     transition: all .5s;
+    cursor: pointer;
 }
 
-.sendBtn:hover {
+.sendBtn:enabled:hover {
     background: rgba(33, 34, 44, 0.5);
     transform: scale(1.05);
+}
+
+.sendBtn:disabled {
+    cursor: auto;
+    color: rgba(255, 255, 255, 0.377);
+    border: 0.1rem solid rgba(255, 255, 255, 0.377);
+}
+
+.sendBtn:disabled .icon {
+    color: rgba(255, 255, 255, 0.377);
 }
 
 .textarea {
@@ -204,5 +211,9 @@ input[type=number] {
 @media(max-width: 400px) {
     .qr {
         width: 27rem;
+    }
+
+    .container {
+        margin-top: 20rem;
     }
 }

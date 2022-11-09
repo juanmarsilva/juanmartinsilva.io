@@ -396,6 +396,12 @@
 
 }
 
+@media(max-width: 400px) {
+    .imgContainer {
+        top: -7vh;
+    }
+}
+
 
 
 
