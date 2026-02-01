@@ -1,23 +1,10 @@
 import { BentoCard } from "./BentoCard";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Experience() {
-  const experiences = [
-    {
-      role: "Front End Developer",
-      company: "Quares IT Solutions",
-      period: "2023 - Presente",
-      activities: [
-        "Desempeño un rol clave en el desarrollo de software, implementando funcionalidades, optimizando código y apoyando en decisiones arquitectónicas.",
-        "Realizo análisis de documentación funcional para proponer técnicamente las tareas a desarrollar.",
-        "Realizo optimizaciones en el código para mejorar el rendimiento y la experiencia del usuario.",
-        "Participo en revisiones de código y de retroalimentación a otros desarrolladores.",
-        "Participo en diseños técnicos o de arquitectura, y en la construcción de documentación técnica.",
-        "Realizo estimaciones de tiempos de desarrollo, cumpliendo con los mismos o alertando tempranamente aportando planes de acción alternativos.",
-      ],
-      highlight: true
-    }
-  ];
+  const { t } = useLanguage();
+  const experiences = t.experience.list;
 
   return (
     <>

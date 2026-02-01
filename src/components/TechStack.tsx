@@ -1,7 +1,10 @@
 import { BentoCard } from "./BentoCard";
 import { Monitor, Smartphone, Database, Layers } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function TechStack() {
+  const { t } = useLanguage();
+
   return (
     <>
       <BentoCard span={2} className="relative group">
@@ -9,12 +12,12 @@ export function TechStack() {
           <div className="p-3 rounded-xl bg-blue-500/10 text-blue-400">
             <Monitor size={24} />
           </div>
-          <span className="text-xs font-medium text-slate-500">CORE</span>
+          <span className="text-xs font-medium text-slate-500">{t.stack.core}</span>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-2">Frontend development</h3>
+          <h3 className="text-xl font-bold mb-2">{t.stack.frontendTitle}</h3>
           <p className="text-sm text-slate-400 leading-relaxed mb-6">
-            Interfaces reactivas y performantes con un enfoque en accesibilidad.
+            {t.stack.frontendDesc}
           </p>
           <div className="flex flex-wrap gap-2">
             {["React", "Next.js 15", "Angular", "Tailwind CSS", "Framer Motion"].map((tech) => (
@@ -30,9 +33,9 @@ export function TechStack() {
         <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400 w-fit mb-4">
           <Smartphone size={24} />
         </div>
-        <h3 className="text-xl font-bold mb-2">Mobile</h3>
+        <h3 className="text-xl font-bold mb-2">{t.stack.mobileTitle}</h3>
         <p className="text-sm text-slate-400 leading-relaxed mb-6">
-          Apps nativas escalables.
+          {t.stack.mobileDesc}
         </p>
         <div className="space-y-2">
           {["Flutter", "React Native"].map((tech) => (
@@ -48,7 +51,7 @@ export function TechStack() {
         <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 w-fit mb-4">
           <Database size={24} />
         </div>
-        <h3 className="text-xl font-bold mb-2">Backend & DB</h3>
+        <h3 className="text-xl font-bold mb-2">{t.stack.backendTitle}</h3>
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-400">
           {["NestJS", "TS", "PostgreSQL", "Oracle", "MongoDB"].map((tech) => (
             <span key={tech}>{tech}</span>

@@ -3,15 +3,18 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { User, Code, Briefcase, Mail } from "lucide-react";
-
-const navItems = [
-  { name: "Sobre Mí", href: "#hero", icon: User },
-  { name: "Stack", href: "#stack", icon: Code },
-  { name: "Experiencia", href: "#experience", icon: Briefcase },
-  { name: "Contacto", href: "#contact", icon: Mail },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Navbar() {
+  const { t } = useLanguage();
+
+  const navItems = [
+    { name: t.nav.about, href: "#hero", icon: User },
+    { name: t.nav.stack, href: "#stack", icon: Code },
+    { name: t.nav.experience, href: "#experience", icon: Briefcase },
+    { name: t.nav.contact, href: "#contact", icon: Mail },
+  ];
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}

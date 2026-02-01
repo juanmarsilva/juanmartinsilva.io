@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { Navbar } from "@/components/Navbar";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 import "./globals.css";
 
@@ -30,8 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-blue-500/30`}
       >
-        <Navbar />
-        {children}
+        <LanguageProvider>
+          <Navbar />
+          {children}
+          <LanguageSwitcher />
+        </LanguageProvider>
       </body>
     </html>
   );
