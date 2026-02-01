@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Juan Silva | Fullstack Developer",
-  description: "Portafolio profesional de Juan Silva - Fullstack Developer.",
+  title: "Juan Martín Silva | Fullstack Developer",
+  description: "Portafolio profesional de Juan Martín Silva - Fullstack Developer.",
 };
 
 export default function RootLayout({
