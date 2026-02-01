@@ -26,14 +26,17 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          {/* todo: agregar link a CV */}
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 rounded-full bg-white text-slate-950 font-bold flex items-center gap-2 hover:bg-slate-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+            href="https://raw.githubusercontent.com/juanmarsilva/assets/main/cv-es.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Juan_Martin_Silva_CV.pdf"
           >
             Descargar CV <Download size={18} />
-          </motion.button>
+          </motion.a>
           <motion.a
             href="#experience"
             whileHover={{ x: 5 }}

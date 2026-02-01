@@ -8,10 +8,12 @@ export function Experience() {
       company: "Quares IT Solutions",
       period: "2023 - Presente",
       activities: [
-        "Desarrollo y mantenimiento de interfaces de usuario modernas utilizando Next.js y TypeScript.",
-        "Optimización de performance y Core Web Vitals para aplicaciones de alta escalabilidad.",
-        "Implementación de sistemas de diseño robustos con Tailwind CSS y Framer Motion.",
-        "Colaboración estrecha con equipos de Producto y UI/UX para asegurar la mejor experiencia de usuario."
+        "Desempeño un rol clave en el desarrollo de software, implementando funcionalidades, optimizando código y apoyando en decisiones arquitectónicas.",
+        "Realizo análisis de documentación funcional para proponer técnicamente las tareas a desarrollar.",
+        "Realizo optimizaciones en el código para mejorar el rendimiento y la experiencia del usuario.",
+        "Participo en revisiones de código y de retroalimentación a otros desarrolladores.",
+        "Participo en diseños técnicos o de arquitectura, y en la construcción de documentación técnica.",
+        "Realizo estimaciones de tiempos de desarrollo, cumpliendo con los mismos o alertando tempranamente aportando planes de acción alternativos.",
       ],
       highlight: true
     }
