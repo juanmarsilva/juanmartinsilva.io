@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Download, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { HeroAnimation } from "./HeroAnimation";
 
 export function Hero() {
   const { t, language } = useLanguage();
@@ -10,15 +11,15 @@ export function Hero() {
   const cvUrl = `https://raw.githubusercontent.com/juanmarsilva/assets/main/cv-${language}.pdf`
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <section id="about" className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-blue-500/10 blur-[120px] -z-10 rounded-full" />
+      <HeroAnimation />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl"
+        className="max-w-4xl relative z-10 p-12 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-[80px] shadow-2xl"
       >
         <span className="inline-block px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-semibold mb-6">
           {t.hero.role}
@@ -45,7 +46,7 @@ export function Hero() {
           <motion.a
             href="#experience"
             whileHover={{ x: 5 }}
-            className="group px-8 py-4 rounded-full border border-white/10 glass-dark text-white font-medium flex items-center gap-2"
+            className="group px-8 py-4 rounded-full border border-white/10 bg-slate-950 text-white font-medium flex items-center gap-2"
           >
             {t.hero.workExperience} <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </motion.a>

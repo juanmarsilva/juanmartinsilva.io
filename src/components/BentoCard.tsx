@@ -25,7 +25,7 @@ export function BentoCard({ children, className, span = 1 }: BentoCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "glass overflow-hidden rounded-2xl p-6 flex flex-col justify-between transition-all hover:bg-white/10 group",
+        "glass overflow-hidden rounded-2xl p-6 flex flex-col justify-start transition-all hover:bg-white/10 group",
         spanClass,
         className
       )}

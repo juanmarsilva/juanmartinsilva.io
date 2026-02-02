@@ -9,11 +9,13 @@ export function Navbar() {
   const { t } = useLanguage();
 
   const navItems = [
-    { name: t.nav.about, href: "#hero", icon: User },
+    { name: t.nav.about, href: "#about", icon: User },
     { name: t.nav.stack, href: "#stack", icon: Code },
     { name: t.nav.experience, href: "#experience", icon: Briefcase },
     { name: t.nav.contact, href: "#contact", icon: Mail },
   ];
+
+
 
   return (
     <motion.nav
@@ -22,7 +24,7 @@ export function Navbar() {
       className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-2xl"
     >
       <div className="glass px-6 py-3 rounded-full flex items-center justify-between shadow-2xl">
-        <div className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        <div className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           JMS.
         </div>
         <ul className="flex items-center gap-6">
