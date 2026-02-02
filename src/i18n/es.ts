@@ -31,6 +31,17 @@ export const es: Translations = {
         ],
         highlight: true,
       },
+      {
+        role: "Full Stack Tech Assistant",
+        company: "Henry Bootcamp",
+        period: "2022 - 2023",
+        activities: [
+          "Coordinar a un grupo de estudiantes para lograr la integración al equipo de estudio.",
+          "Asistir a la resolución de ejercicios y promover la colaboración grupal (Pair Programming).",
+          "Proponer ideas para la mejora de los procesos del Bootcamp.",
+        ],
+        highlight: false,
+      },
     ],
   },
   stack: {
@@ -40,6 +51,9 @@ export const es: Translations = {
     mobileTitle: "Mobile",
     mobileDesc: "Apps nativas escalables.",
     backendTitle: "Backend & DB",
+    mobileSubtitle: "APPS",
+    backendSubtitle: "API & DATA",
+    backendDesc: "APIs robustas y bases de datos optimizadas.",
   },
   site: {
     title: "Juan Martín Silva | Fullstack Developer",

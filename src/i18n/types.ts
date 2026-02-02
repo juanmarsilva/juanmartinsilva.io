@@ -35,6 +35,9 @@ export interface Translations {
     mobileTitle: string;
     mobileDesc: string;
     backendTitle: string;
+    mobileSubtitle: string;
+    backendSubtitle: string;
+    backendDesc: string;
   };
   footer: {
     talk: string;
