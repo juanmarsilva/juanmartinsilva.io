@@ -74,4 +74,8 @@ export const en: Translations = {
       subtitle: "Impact and results in high-level projects.",
     },
   },
+  notFound: {
+    text: "Oops, it seems this page does not exist.",
+    button: "Go back home",
+  },
 };

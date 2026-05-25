@@ -54,4 +54,8 @@ export interface Translations {
       subtitle: string;
     };
   };
+  notFound: {
+    text: string;
+    button: string;
+  };
 }
