@@ -74,4 +74,8 @@ export const es: Translations = {
       subtitle: "Impacto y resultados en proyectos de alto nivel.",
     },
   },
+  notFound: {
+    text: "Oops, parece que esta página no existe.",
+    button: "Volver al inicio",
+  },
 };
